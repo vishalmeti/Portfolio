@@ -96,6 +96,7 @@
 
   .floating {
     position: relative;
+    -web-kit-mask-repeat: no-repeat !important;
     animation: floatAnimation 4s ease-in-out infinite;
 }
 

@@ -1,0 +1,11 @@
+To make the image fit your backlground svg: watch this video: https://www.youtube.com/watch?v=ApIctpycJPk
+
+Step 1: go to https://base64.guru/converter/encode/image/svg
+Step 2: add your svg to which your image needs to morf into
+Step 3: Copy the base64 code it gives
+Step 4: in the class of your image, add -> 
+    #me{
+    -webkit-mask-image:url(" the code you copied from the website. add without double quotes. add directly the code.")
+    }
+
+Step 5: in parent div of your image add -> -web-kit-mask-repeat: no-repeat

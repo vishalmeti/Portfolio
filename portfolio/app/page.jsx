@@ -1,7 +1,10 @@
-import Image from "next/image";
+import Me from "@/components/Me";
+
 
 export default function Home() {
   return (
-    <main>Home page</main>
+    <main>
+      <Me/>
+    </main>
   );
 }

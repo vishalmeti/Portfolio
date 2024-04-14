@@ -8,7 +8,7 @@ import { motion } from "framer-motion";
 
 import {
   RiBriefcase4Fill,
-  RiTeamFill,
+  RiYoutubeFill,
   RiTodoFill,
   RiArrowDownSLine,
 } from "react-icons/ri";
@@ -68,7 +68,9 @@ const Me = () => {
             />
           </div>
           <div className="hidden md:flex relative floating">
-            <Badge className="" icon={<RiBriefcase4Fill/>} endCount={2} endCountText='Years of experience' />
+            <Badge className="" icon={<RiBriefcase4Fill/>} containerStyles='absolute top-[24%] left-[-5rem]' endCount={2} endCountText='+' badgeText='Years of experience' />
+            <Badge className="" icon={<RiTodoFill/>} containerStyles='absolute top-[80%] left-[1rem]' endCount={5} endCountText='' badgeText='Finished Projects' />
+            <Badge className="" icon={<RiYoutubeFill/>} containerStyles='absolute top-[40%] right-[-5rem]' endCount={1240} endCountText='k' badgeText='Viewers' />
             <div
               className="bg-hero_shape2_light zi--1 dark:bg-hero_shape2_dark w-[500px] z-0 h-[500px] bg-no-repeat absolute -top-1 -right-2"
               // style={{ "z-index": "-1" }}

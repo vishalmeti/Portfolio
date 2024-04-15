@@ -1,4 +1,6 @@
+'use client'
 import Image from "next/image"
+import { useEffect, useState } from "react"
 
 const DevImg = ({containerStyles, imgSrc}) => {
   return (

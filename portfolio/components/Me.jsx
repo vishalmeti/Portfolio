@@ -77,7 +77,7 @@ const Me = () => {
             ></div>
             <DevImg
               containerStyles="bg-hero_shape  dark:bg-hero_shape_dark w-[510px] h-[462px] bg-no-repeat"
-              imgSrc="/hero/meFinal.png"
+              imgSrc="/hero/meFinal1.png"
             />
           </div>
         </div>

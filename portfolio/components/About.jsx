@@ -1,6 +1,8 @@
 import DevImg from "./DevImg";
 import Image from "next/image";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Progress } from "@/components/ui/progress"
+
 
 import {
   User2,
@@ -45,7 +47,7 @@ const qualificationData = [
     data: [
       {
         university: "SDM College of Engineering and Technology",
-        qualification: "Bachelor of Computer Science",
+        qualification: "BE / BTech in Computer Science",
         years: "2018-2022",
         grade: "8.02 CGPA",
       },
@@ -61,13 +63,15 @@ const qualificationData = [
     data: [
       {
         company: "SONY",
-        qualification: "Software Engineer / Web Developer",
+        role: "Software Engineer / Web Developer",
         years: "Aug 2022 - Aug 2023",
+        logo:'/Experience/sony.png'
       },
       {
         company: "Disprz",
-        qualification: "Associate Software Engineer / Web Developer",
+        role: "Associate Software Engineer / Web Developer",
         years: "Aug 2023 - Current",
+        logo:'/Experience/disprz.png'
       },
     ],
   },
@@ -79,33 +83,47 @@ const skillData = [
     data: [
       {
         name: "React Js / Redux",
+        strength:80
       },
       {
         name: "Next Js",
+        strength:65
       },
       {
         name: "Python",
+        strength:89
       },
       {
         name: "Lit Js",
+        strength:90
       },
       {
         name: "JavaScript",
+        strength:80
       },
       {
         name: "FrontEnd Developement",
+        strength:80
       },
       {
         name: "Git / Version control",
+        strength:92
       },
       {
         name: "Django",
+        strength:60
       },
       {
-        name: "Express.js / Mongo Db",
+        name: "Express.js",
+        strength:65
+      },
+      {
+        name: "Mongo Db",
+        strength:60
       },
       {
         name: "HTML / CSS",
+        strength:90
       },
     ],
   },
@@ -117,17 +135,211 @@ const About = () => {
   };
 
   return (
-    <section className="xl:h-[860px] pb-12 xl:py-24">
+    <section className="lg:h-[860px] pb-12 xl:py-24">
       <div className="container mx-auto">
-        <h2 className="section-title mb-8 mt-6 xl:mb-16 text-center mx-auto">
+        <h2 className="section-title mb-8 mt-10 xl:mb-16 text-center mx-auto">
           About Me
         </h2>
-        <div className="">
-            {/* image  */}
-            <div>
-                {/* <DevImg containerStyles='bg_about_shape_light dark:bg_about_shape_dark w-[505px] h-[505px] bg-no-repeat relative' imgSrc='/hero/meFinal.png'/> */}
-                {/* <Image className="w-[505px] h-[505px] hidden md:flex rounded-tl-3xl rounded-br-3xl" width={400} height={300} src='/hero/AboutImage.jpeg'/> */}
-            </div>
+        <div className="flex flex-col lg:flex-row items-center">
+          <div className="flex">
+            <Tabs defaultValue="personal">
+              <TabsList className="w-full grid lg:grid-cols-3 lg:max-w-[520px] lg:border dark:border-none">
+                <TabsTrigger className="w-[162px] lg:w-auto" value="personal">
+                  Personal Info
+                </TabsTrigger>
+                <TabsTrigger
+                  className="w-[162px] lg:w-auto"
+                  value="qualification"
+                >
+                  Qualifications
+                </TabsTrigger>
+                <TabsTrigger className="w-[162px] lg:w-auto" value="skills">
+                  My Technical Skills
+                </TabsTrigger>
+              </TabsList>
+              <div className="text-lg mt-12 lg:mt-8">
+                {/* personal  */}
+
+                <TabsContent value="personal">
+                  <div className="flex gap-44">
+                  <div className="text-center lg:text-left">
+                    <h3 className="h3 mb-4">
+                      Unmatched Service Quality <br/> for over 2 years
+                    </h3>
+                    <p className="subtitle max-w-lg max-auto lg:mx-0">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Quos, ratione itaque. Amet harum consequuntur, sequi id
+                      aliquid officiis in similique.
+                    </p>
+                    {/* icons  */}
+                    <div className="grid lg:grid-cols-2 gap-4 mb-12">
+                      {infoData.map((item, index) => {
+                        return (
+                          <div
+                            className="flex items-center fap-x-4 mx-auto xl:mx-0"
+                            key={index}
+                          >
+                            <div className="text-primary">{item.icon}</div>
+                            <div className="">{item.text}</div>
+                          </div>
+                        );
+                      })}
+                    </div>
+                    {/* language  */}
+                    <div className="flex flex-col gap-y-2">
+                      <div className="text-primary">Language Skill</div>
+                      <div className="border-b border-border"></div>
+                      <div className="">
+                        English, Hindi, Kannada, Malayalam, Tamil{" "}
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* image  */}
+
+                  <div className="hidden mb-10 md:flex">
+                    <Image className="mb-5" height={600} width={420} src={'/hero/PersonalData.png'} />
+                  </div>
+                  </div>
+                </TabsContent>
+
+                {/* qualification  */}
+
+                <TabsContent value="qualification">
+                  
+                  <div className="flex">
+                  <div className="">
+                    <h3 className="h3 mb-8 text-center lg:text-left">
+                      My Journey
+                    </h3>
+                    <p className="subtitle max-w-lg max-auto lg:mx-0">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Quos, ratione itaque. Amet harum consequuntur, sequi id
+                      aliquid officiis in similique.
+                    </p>
+                    {/* experience and education wrapper  */}
+                    <div className=" flex flex-col lg:flex-row">
+                      {/* experience */}
+                      <div className="flex flex-col gap-y-6">
+                        <div className="flex gap-x-4 items-center text-[22px] text-primary">
+                          <Briefcase />
+                          <h4 className="capitalize font-medium">
+                            {getData(qualificationData, "experience").title}
+                          </h4>
+                        </div>
+                        {/* list  */}
+                        <div className="flex flex-col gap-y-8">
+                          {getData(qualificationData, "experience").data.map(
+                            (item, index) => {
+                              const { company, role, years,logo } = item;
+                              return (
+                                <div
+                                  className="flex gap-x-8 group rounded-md "
+                                  key={index}
+                                >
+                                  <div className="h-[84px] w-[84px] relative ml-2">
+                                  <Image id='' src={logo} className="pt-1 rounded-md" fill priority alt=''/>
+                                    <div className="w-[11px] h-[11px] rounded-full bg-primary absolute -left-[5px] group-hover:translate-y-[84px] transition-all duration-500"></div>
+                                  </div>
+                                  <div className="">
+                                    <div className="font-semibold text-xl leading-none mb-2">
+                                      {company}
+                                    </div>
+                                    <div className=" text-lg leading-none text-muted-foreground mb-4">
+                                      {role}
+                                    </div>
+                                    <div className="">{years}</div>
+                                  </div>
+                                </div>
+                              );
+                            }
+                          )}
+                        </div>
+                      </div>
+
+                      {/* education  */}
+                      <div className="flex flex-col mt-3 md:mt-0 gap-y-6">
+                        <div className="flex gap-x-4 items-center text-[22px] text-primary">
+                          <GraduationCap size={28} />
+                          <h4 className="capitalize font-medium">
+                            {getData(qualificationData, "education").title}
+                          </h4>
+                        </div>
+                        {/* list  */}
+                        <div className="flex flex-col gap-y-8">
+                          {getData(qualificationData, "education").data.map(
+                            (item, index) => {
+                              const { university, qualification, years,grade } = item;
+                              return (
+                                <div
+                                  className="flex gap-x-8 group rounded-md "
+                                  key={index}
+                                >
+                                  <div className="h-[84px] w-[1px] bg-border relative ml-2">
+                                    <div className="w-[11px] h-[11px] rounded-full bg-primary absolute -left-[5px] group-hover:translate-y-[84px] transition-all duration-500"></div>
+                                  </div>
+                                  <div className="">
+                                    <div className="font-semibold text-xl leading-none mb-2">
+                                      {university}
+                                    </div>
+                                    <div className=" text-lg leading-none text-muted-foreground mb-4">
+                                      {qualification}
+                                    </div>
+                                    <div className="">{years}</div>
+                                    <div className="">{grade}</div>
+                                  </div>
+                                </div>
+                              );
+                            }
+                          )}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="hidden mb-10 md:flex">
+                    <Image className="mb-5" height={200} width={450} src={'/experience/experience.png'} />
+                  </div>
+                  </div>
+                </TabsContent>
+
+                {/* skill  */}
+
+                <TabsContent value="skills">
+                  <div className="flex gap-32">
+
+                  <div className="text-center lg:text-left">
+                    <h3 className="h3 mb-3">
+                      Skills I am Wellworsed in
+                    </h3>
+                    <div className="">
+                      <div className="border-b border-border mb-4"></div>
+                          {/* skill list  */}
+                          <div className="flex flex-col gap-2">
+                            {getData(skillData,'skills').data.map((skill,index)=>{
+                              return(
+                                <>
+                                <div className="w-full gap-2 flex items-center text-left lg:text-left mx-auto lg:mx-0" key={index}>
+                                <div className="w-[11px] h-[11px] rounded-full bg-primary"></div>
+                                  {skill.name}
+                                </div>
+                                  <Progress value={skill.strength} />
+                                  </>
+                              )
+                            })}
+                          </div> 
+                    </div>
+                  </div>
+
+                  <div className="hidden mb-10 md:flex">
+                            <Image className="mb-5" height={600} width={800} src={'/experience/technology.png'} />
+                  </div>
+                  </div>
+                  
+                  
+                </TabsContent>
+              </div>
+            </Tabs>
+          </div>
         </div>
       </div>
     </section>

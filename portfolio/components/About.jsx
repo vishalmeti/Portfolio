@@ -135,44 +135,44 @@ const About = () => {
   };
 
   return (
-    <section className="lg:h-[860px] pb-12 xl:py-24">
+    <section className="xl:h-[860px] pb-12 xl:py-24">
       <div className="container mx-auto">
         <h2 className="section-title mb-8 mt-10 xl:mb-16 text-center mx-auto">
           About Me
         </h2>
-        <div className="flex flex-col lg:flex-row items-center">
+        <div className="flex flex-col xl:flex-row items-center">
           <div className="flex">
             <Tabs defaultValue="personal">
-              <TabsList className="w-full grid lg:grid-cols-3 lg:max-w-[520px] lg:border dark:border-none">
-                <TabsTrigger className="w-[162px] lg:w-auto" value="personal">
+              <TabsList className="w-full grid xl:grid-cols-3 xl:max-w-[520px] xl:border dark:border-none">
+                <TabsTrigger className="w-[162px] xl:w-auto" value="personal">
                   Personal Info
                 </TabsTrigger>
                 <TabsTrigger
-                  className="w-[162px] lg:w-auto"
+                  className="w-[162px] xl:w-auto"
                   value="qualification"
                 >
                   Qualifications
                 </TabsTrigger>
-                <TabsTrigger className="w-[162px] lg:w-auto" value="skills">
+                <TabsTrigger className="w-[162px] xl:w-auto" value="skills">
                   My Technical Skills
                 </TabsTrigger>
               </TabsList>
-              <div className="text-lg mt-12 lg:mt-8">
+              <div className="text-lg mt-12 xl:mt-8">
                 {/* personal  */}
 
                 <TabsContent value="personal">
                   <div className="flex gap-44">
-                  <div className="text-center lg:text-left">
+                  <div className="text-center xl:text-left">
                     <h3 className="h3 mb-4">
-                      Unmatched Service Quality <br/> for over 2 years
+                      Worked for over 2 years
                     </h3>
-                    <p className="subtitle max-w-lg max-auto lg:mx-0">
+                    <p className="subtitle max-w-lg max-auto xl:mx-0">
                       Lorem ipsum dolor sit amet consectetur adipisicing elit.
                       Quos, ratione itaque. Amet harum consequuntur, sequi id
                       aliquid officiis in similique.
                     </p>
                     {/* icons  */}
-                    <div className="grid lg:grid-cols-2 gap-4 mb-12">
+                    <div className="grid xl:grid-cols-2 gap-4 mb-12">
                       {infoData.map((item, index) => {
                         return (
                           <div
@@ -197,7 +197,7 @@ const About = () => {
 
                   {/* image  */}
 
-                  <div className="hidden mb-10 md:flex">
+                  <div className="hidden mb-10 xl:flex">
                     <Image className="mb-5" height={600} width={420} src={'/hero/PersonalData.png'} />
                   </div>
                   </div>
@@ -209,16 +209,16 @@ const About = () => {
                   
                   <div className="flex">
                   <div className="">
-                    <h3 className="h3 mb-8 text-center lg:text-left">
+                    <h3 className="h3 mb-8 text-center xl:text-left">
                       My Journey
                     </h3>
-                    <p className="subtitle max-w-lg max-auto lg:mx-0">
+                    <p className="subtitle max-w-lg max-auto xl:mx-0">
                       Lorem ipsum dolor sit amet consectetur adipisicing elit.
                       Quos, ratione itaque. Amet harum consequuntur, sequi id
                       aliquid officiis in similique.
                     </p>
                     {/* experience and education wrapper  */}
-                    <div className=" flex flex-col lg:flex-row">
+                    <div className=" flex flex-col xl:flex-row">
                       {/* experience */}
                       <div className="flex flex-col gap-y-6">
                         <div className="flex gap-x-4 items-center text-[22px] text-primary">
@@ -258,7 +258,7 @@ const About = () => {
                       </div>
 
                       {/* education  */}
-                      <div className="flex flex-col mt-3 md:mt-0 gap-y-6">
+                      <div className="flex flex-col mt-3 xl:mt-0 gap-y-6">
                         <div className="flex gap-x-4 items-center text-[22px] text-primary">
                           <GraduationCap size={28} />
                           <h4 className="capitalize font-medium">
@@ -296,7 +296,7 @@ const About = () => {
                       </div>
                     </div>
                   </div>
-                  <div className="hidden mb-10 md:flex">
+                  <div className="hidden mb-10 xl:flex">
                     <Image className="mb-5" height={200} width={450} src={'/experience/experience.png'} />
                   </div>
                   </div>
@@ -307,7 +307,7 @@ const About = () => {
                 <TabsContent value="skills">
                   <div className="flex gap-32">
 
-                  <div className="text-center lg:text-left">
+                  <div className="text-center xl:text-left">
                     <h3 className="h3 mb-3">
                       Skills I am Wellworsed in
                     </h3>
@@ -318,7 +318,7 @@ const About = () => {
                             {getData(skillData,'skills').data.map((skill,index)=>{
                               return(
                                 <>
-                                <div className="w-full gap-2 flex items-center text-left lg:text-left mx-auto lg:mx-0" key={index}>
+                                <div className="w-full gap-2 flex items-center text-left xl:text-left mx-auto xl:mx-0" key={index}>
                                 <div className="w-[11px] h-[11px] rounded-full bg-primary"></div>
                                   {skill.name}
                                 </div>
@@ -330,7 +330,7 @@ const About = () => {
                     </div>
                   </div>
 
-                  <div className="hidden mb-10 md:flex">
+                  <div className="hidden mb-10 xl:flex">
                             <Image className="mb-5" height={600} width={800} src={'/experience/technology.png'} />
                   </div>
                   </div>

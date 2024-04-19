@@ -34,7 +34,7 @@ const Me = () => {
   }, []);
 
   return (
-    <section className="py-12 xl:py-24 h-[84vh] xl:pt-28 bg-curve bg-no-repeat bg-bottom bg-cover">
+    <section className="py-12 xl:py-24 xl:pt-28 bg-curve bg-no-repeat bg-bottom bg-cover">
       <div className="container mx-auto">
         <div className="flex justify-between gap-x-8">
           <div className="flex max-w-[600px] flex-col justify-center mx-auto xl:mx-0 text-center md:text-left">
@@ -67,7 +67,7 @@ const Me = () => {
               iconStyles="text-foreground text-[30px] hover:text-primary transition-all"
             />
           </div>
-          <div className="hidden md:flex relative floating">
+          <div className="hidden xl:flex relative floating">
             <Badge className="" icon={<RiBriefcase4Fill/>} containerStyles='absolute top-[24%] left-[-5rem]' endCount={2} endCountText='+' badgeText='Years of experience' />
             <Badge className="" icon={<RiTodoFill/>} containerStyles='absolute top-[80%] left-[1rem]' endCount={5} endCountText='' badgeText='Finished Projects' />
             <Badge className="" icon={<RiYoutubeFill/>} containerStyles='absolute top-[55%] right-[-3rem]' endCount={1240} endCountText='k' badgeText='Viewers' />

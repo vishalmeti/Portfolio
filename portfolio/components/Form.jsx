@@ -14,10 +14,6 @@ const Form = () => {
   // const [state, handleSubmit] = useForm("xgegryyp");  //work.vishalmeti@gmail.com
   const [state, handleSubmit] = useForm("mdoqyzzk");  //vishalmeti8@gmail.com
 
-  const formSubmit = ()=> {
-    console.log(state.result)
-  }
-
   if (state.succeeded) {
     toast.success("Thanks for contacting! We will get in touch very soon")
   }
@@ -64,22 +60,12 @@ const Form = () => {
       <Button
         className="flex items-center gap-x-1 max-w-[166px]"
         disabled={state.submitting}
-        onClick={formSubmit}
         type="submit"
       >
         Let's Talk <ArrowRightIcon size={20} />
       </Button>
       <Toaster position="top-center"  richColors/>
     </form>
-      // <Button
-      //   className="flex items-center gap-x-1 max-w-[166px]"
-      //   disabled={state.submitting}
-      //   onClick={()=> toast.success("hello")}
-        
-      // >
-      //   trigger toast <ArrowRightIcon size={20} />
-        
-      // </Button>
   );
 };
 

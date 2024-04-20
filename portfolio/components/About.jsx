@@ -107,7 +107,7 @@ const skillData = [
       },
       {
         name: "Git / Version control",
-        strength:92
+        strength:62
       },
       {
         name: "Django",

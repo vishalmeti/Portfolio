@@ -57,9 +57,11 @@ const Me = () => {
                   Contact me <Send size={18} />
                 </Button>
               </Link>
+              <Link target="_blank" href="https://drive.google.com/file/d/1fWMXmRvxqxnf0OU2xjn_WM-lWbN42VML/view?usp=sharing">
               <Button variant="secondary" className="gap-x-2">
                 Download CV <Download size={18} />
               </Button>
+              </Link>
             </div>
 
             <Socials

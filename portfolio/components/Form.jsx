@@ -4,25 +4,82 @@ import { User, MailIcon, ArrowRightIcon, MessageSquare } from "lucide-react";
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
 import { Textarea } from "./ui/textarea";
-import Link from "next/link";
+import { useForm } from "@formspree/react";
+
+import {Toaster,toast} from 'sonner'
+
+
 
 const Form = () => {
+  // const [state, handleSubmit] = useForm("xgegryyp");  //work.vishalmeti@gmail.com
+  const [state, handleSubmit] = useForm("mdoqyzzk");  //vishalmeti8@gmail.com
+
+  const formSubmit = ()=> {
+    console.log(state.result)
+  }
+
+  if (state.succeeded) {
+    toast.success("Thanks for contacting! We will get in touch very soon")
+  }
+  else if (state.errors) {
+    toast.error("Error connecting with developer. Please try later!")
+  }
   return (
-    <form className="flex flex-col gap-y-4">
+    <form
+      className="flex flex-col gap-y-4"
+      onSubmit={handleSubmit}
+      method="POST"
+    >
       <div className="relative flex items-center">
-        <Input type="name" id="name" placeholder="Name" />
+        <Input
+          name="Name"
+          type="name"
+          id="userName"
+          placeholder="Name"
+          required={true}
+
+        />
         <User className="absolute right-6" size={20} />
       </div>
       <div className="relative flex items-center">
-        <Input type="email" id="email" placeholder="Email" />
+        <Input
+          name="Email"
+          type="email"
+          id="email"
+          placeholder="Email"
+          required={true}
+
+        />
         <MailIcon className="absolute right-6" size={20} />
       </div>
       <div className="relative flex items-center">
-        <Textarea placeholder="Type Your Message Here" />
+        <Textarea
+          name="Message"
+          id="message"
+          placeholder="Type Your Message Here"
+
+        />
         <MessageSquare className="absolute top-4 right-6" size={20} />
       </div>
-      <Link href='/'><Button className="flex items-center gap-x-1 max-w-[166px]">Let's Talk <ArrowRightIcon size={20}/> </Button></Link>
+      <Button
+        className="flex items-center gap-x-1 max-w-[166px]"
+        disabled={state.submitting}
+        onClick={formSubmit}
+        type="submit"
+      >
+        Let's Talk <ArrowRightIcon size={20} />
+      </Button>
+      <Toaster position="top-center"  richColors/>
     </form>
+      // <Button
+      //   className="flex items-center gap-x-1 max-w-[166px]"
+      //   disabled={state.submitting}
+      //   onClick={()=> toast.success("hello")}
+        
+      // >
+      //   trigger toast <ArrowRightIcon size={20} />
+        
+      // </Button>
   );
 };
 

@@ -1,9 +1,125 @@
-import React from 'react'
+"use client";
+
+import React, { useState } from "react";
+import { Tabs, TabsList, TabsContent, TabsTrigger } from "@/components/ui/tabs";
+import ProjectCard from "@/components/ui/ProjectCard";
+import Reveal from "@/components/ui/Reveal";
+
+const projectData = [
+  {
+    image: "/work/3.png",
+    category: "react js",
+    name: "abc website",
+    description:
+      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint, blanditiis.",
+    link: "/",
+    github: "/",
+  },
+  {
+    image: "/work/4.png",
+    category: "react js",
+    name: "abc website",
+    description:
+      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint, blanditiis.",
+    link: "/",
+    github: "/",
+  },
+  {
+    image: "/work/4.png",
+    category: "full stack",
+    name: "abc website",
+    description:
+      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint, blanditiis.",
+    link: "/",
+    github: "/",
+  },
+  {
+    image: "/work/2.png",
+    category: "next js",
+    name: "abc website",
+    description:
+      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint, blanditiis.",
+    link: "/",
+    github: "/",
+  },
+  {
+    image: "/work/2.png",
+    category: "node js",
+    name: "abc website",
+    description:
+      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint, blanditiis.",
+    link: "/",
+    github: "/",
+  },
+  {
+    image: "/work/2.png",
+    category: "full stack",
+    name: "abc website",
+    description:
+      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint, blanditiis.",
+    link: "/",
+    github: "/",
+  },
+  {
+    image: "/work/1.png",
+    category: "next js",
+    name: "abc website",
+    description:
+      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint, blanditiis.",
+    link: "/",
+    github: "/",
+  },
+];
+// remove category duplicates
+const uniqueCategories = [
+  "all projects",
+  ...new Set(projectData.map((item) => item.category)),
+];
 
 const Projects = () => {
-  return (
-    <div>Projects</div>
-  )
-}
+  const [categories, setcategories] = useState(uniqueCategories);
+  const [category, setcategory] = useState("all projects");
+  const filteredProjects = projectData.filter(project =>{
+    return category === 'all projects' ? project : project.category === category
+  })
 
-export default Projects
+  console.log(filteredProjects)
+  return (
+    <section className="min-h-screen pt-12">
+      <div className="container mx-auto">
+        <h2 className="section-title mb-8 xl:mb-16 text-center mx-auto">
+          <Reveal>My Projects</Reveal>
+        </h2>
+
+        {/* tabs  */}
+
+        <Tabs defaultValue={category} className="mb-24 xl:mb-48">
+          <TabsList className="w-full grid h-full md:grid-cols-5 lg:max-w-[640px] mb-12 mx-auto md:border dark:border-none">
+            {categories.map((item, index) => {
+              return (
+                <TabsTrigger
+                onClick={()=> setcategory(item)}
+                  value={item}
+                  className="capitalize w-[162px] md:w-auto"
+                >
+                  {item}
+                </TabsTrigger>
+              );
+            })}
+          </TabsList>
+
+          {/* tabs content  */}
+          <div className="text-lg xl:mt-8 grid grid-cols-1 lg:grid-cols-3 gap-4">
+            {filteredProjects.map((project,index)=>{
+              return <TabsContent value={category} key={index} >
+                <ProjectCard project={project} showBadge={false}/>
+              </TabsContent>
+            })}
+          </div>
+        </Tabs>
+      </div>
+    </section>
+  );
+};
+
+export default Projects;

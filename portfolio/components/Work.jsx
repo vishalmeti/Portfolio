@@ -110,7 +110,7 @@ const Work = () => {
             {projectData.slice(0, 4).map((project, index) => {
               return (
                 <SwiperSlide>
-                  <ProjectCard project={project} />
+                  <ProjectCard project={project} showBadge={true} />
                 </SwiperSlide>
               );
             })}

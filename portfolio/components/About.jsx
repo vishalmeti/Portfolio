@@ -135,7 +135,7 @@ const About = () => {
   };
 
   return (
-    <section className="xl:h-[860px] pb-12 xl:py-24">
+    <section className="xl:h-full pb-12 xl:py-24">
       <div className="container mx-auto">
         <h2 className="section-title mb-8 mt-10 xl:mb-16 text-center mx-auto">
           About Me
@@ -318,12 +318,12 @@ const About = () => {
                             {getData(skillData,'skills').data.map((skill,index)=>{
                               return(
                                 <>
-                                <div className="w-full gap-2 flex items-center text-left xl:text-left mx-auto xl:mx-0" key={index}>
+                                <div className="w-full h-full gap-2 flex items-center text-left xl:text-left mx-auto xl:mx-0" key={index}>
                                 <div className="w-[11px] h-[11px] rounded-full bg-primary"></div>
                                   {skill.name}
                                 </div>
                                   <Progress value={skill.strength} />
-                                  </>
+                                </>
                               )
                             })}
                           </div> 

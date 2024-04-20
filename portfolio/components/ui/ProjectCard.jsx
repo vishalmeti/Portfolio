@@ -7,7 +7,7 @@ import { Badge } from "./badge";
 import { GitHubLogoIcon } from "@radix-ui/react-icons";
 import Reveal from "./Reveal";
 
-const ProjectCard = ({ project }) => {
+const ProjectCard = ({ project,showBadge }) => {
   return (
     <Card>
       <CardHeader className="group overflow-hidden relative p-1">
@@ -40,7 +40,7 @@ const ProjectCard = ({ project }) => {
         </div>
       </CardHeader>
       <div className="h-full px-8 py-4">
-        <Badge className="uppercase text-sm font-medium mb-2 absolute top-4 left-5">
+        <Badge className={`uppercase text-sm font-medium mb-2 absolute top-4 left-5  ${showBadge?'': 'hidden'}`}>
           {project.category}
         </Badge>
         <h4 className="h4 mb-1"> <Reveal>{project.name}</Reveal></h4>

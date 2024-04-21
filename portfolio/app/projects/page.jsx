@@ -4,72 +4,8 @@ import React, { useState } from "react";
 import { Tabs, TabsList, TabsContent, TabsTrigger } from "@/components/ui/tabs";
 import ProjectCard from "@/components/ui/ProjectCard";
 import Reveal from "@/components/ui/Reveal";
+import {projectData} from '../../Data/ProjectsData'
 
-const projectData = [
-  {
-    image: "/work/3.png",
-    category: "react js",
-    name: "abc website",
-    description:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint, blanditiis.",
-    link: "/",
-    github: "/",
-  },
-  {
-    image: "/work/4.png",
-    category: "react js",
-    name: "abc website",
-    description:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint, blanditiis.",
-    link: "/",
-    github: "/",
-  },
-  {
-    image: "/work/4.png",
-    category: "full stack",
-    name: "abc website",
-    description:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint, blanditiis.",
-    link: "/",
-    github: "/",
-  },
-  {
-    image: "/work/2.png",
-    category: "next js",
-    name: "abc website",
-    description:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint, blanditiis.",
-    link: "/",
-    github: "/",
-  },
-  {
-    image: "/work/2.png",
-    category: "node js",
-    name: "abc website",
-    description:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint, blanditiis.",
-    link: "/",
-    github: "/",
-  },
-  {
-    image: "/work/2.png",
-    category: "full stack",
-    name: "abc website",
-    description:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint, blanditiis.",
-    link: "/",
-    github: "/",
-  },
-  {
-    image: "/work/1.png",
-    category: "next js",
-    name: "abc website",
-    description:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint, blanditiis.",
-    link: "/",
-    github: "/",
-  },
-];
 // remove category duplicates
 const uniqueCategories = [
   "all projects",
@@ -94,7 +30,7 @@ const Projects = () => {
         {/* tabs  */}
 
         <Tabs defaultValue={category} className="mb-24 xl:mb-48">
-          <TabsList className="w-full grid h-full md:grid-cols-5 lg:max-w-[640px] mb-12 mx-auto md:border dark:border-none">
+          {/* <TabsList className={`w-full grid h-full md:grid-cols-${categories.length} lg:max-w-[640px] mb-12 mx-auto md:border dark:border-none`}>
             {categories.map((item, index) => {
               return (
                 <TabsTrigger
@@ -106,7 +42,7 @@ const Projects = () => {
                 </TabsTrigger>
               );
             })}
-          </TabsList>
+          </TabsList> */}
 
           {/* tabs content  */}
           <div className="text-lg xl:mt-8 grid grid-cols-1 lg:grid-cols-3 gap-4">

@@ -10,72 +10,73 @@ import "swiper/css/pagination";
 import { Pagination } from "swiper/modules";
 import ProjectCard from "./ui/ProjectCard";
 import { Swiper, SwiperSlide } from "swiper/react";
+import {projectData} from '../Data/ProjectsData'
 
-const projectData = [
-  {
-    image: "/work/3.png",
-    category: "react js",
-    name: "abc website",
-    description:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint, blanditiis.",
-    link: "/",
-    github: "/",
-  },
-  {
-    image: "/work/4.png",
-    category: "react js",
-    name: "abc website",
-    description:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint, blanditiis.",
-    link: "/",
-    github: "/",
-  },
-  {
-    image: "/work/4.png",
-    category: "full stack",
-    name: "abc website",
-    description:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint, blanditiis.",
-    link: "/",
-    github: "/",
-  },
-  {
-    image: "/work/2.png",
-    category: "next js",
-    name: "abc website",
-    description:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint, blanditiis.",
-    link: "/",
-    github: "/",
-  },
-  {
-    image: "/work/2.png",
-    category: "node js",
-    name: "abc website",
-    description:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint, blanditiis.",
-    link: "/",
-    github: "/",
-  },
-  {
-    image: "/work/2.png",
-    category: "full stack",
-    name: "abc website",
-    description:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint, blanditiis.",
-    link: "/",
-    github: "/",
-  },
-  {
-    image: "/work/1.png",
-    category: "next js",
-    name: "abc website",
-    description:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint, blanditiis.",
-    link: "/",
-    github: "/",
-  },
-];
+// const projectData = [
+//   {
+//     image: "/work/image.png",
+//     category: "react js",
+//     name: "abc website",
+//     description:
+//       "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint, blanditiis.",
+//     link: "/",
+//     github: "/",
+//   },
+//   {
+//     image: "/work/4.png",
+//     category: "react js",
+//     name: "abc website",
+//     description:
+//       "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint, blanditiis.",
+//     link: "/",
+//     github: "/",
+//   },
+//   {
+//     image: "/work/4.png",
+//     category: "full stack",
+//     name: "abc website",
+//     description:
+//       "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint, blanditiis.",
+//     link: "/",
+//     github: "/",
+//   },
+//   {
+//     image: "/work/2.png",
+//     category: "next js",
+//     name: "abc website",
+//     description:
+//       "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint, blanditiis.",
+//     link: "/",
+//     github: "/",
+//   },
+//   {
+//     image: "/work/2.png",
+//     category: "node js",
+//     name: "abc website",
+//     description:
+//       "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint, blanditiis.",
+//     link: "/",
+//     github: "/",
+//   },
+//   {
+//     image: "/work/2.png",
+//     category: "full stack",
+//     name: "abc website",
+//     description:
+//       "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint, blanditiis.",
+//     link: "/",
+//     github: "/",
+//   },
+//   {
+//     image: "/work/1.png",
+//     category: "next js",
+//     name: "abc website",
+//     description:
+//       "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint, blanditiis.",
+//     link: "/",
+//     github: "/",
+//   },
+// ];
 
 const Work = () => {
   return (

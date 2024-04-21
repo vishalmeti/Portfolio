@@ -32,8 +32,8 @@ export const projectData = [
       name: "Portfolio",
       description:
         "A portfolio website using React, Next js to showcase my profile and projects worked on so far. Users can also contact using the form provided .",
-      link: "/",
-      github: "/",
+      link: '',
+      github: "https://github.com/vishalmeti/Portfolio",
     },
     // {
     //   image: "/work/2.png",

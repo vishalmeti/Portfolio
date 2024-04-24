@@ -297,7 +297,7 @@ const About = () => {
                     </div>
                   </div>
                   <div className="hidden mb-10 xl:flex">
-                    <Image className="mb-5" height={200} width={450} src={'/experience/experience.png'} />
+                    <Image className="mb-5" height={200} width={450} src={'/Experience/experience.png'} />
                   </div>
                   </div>
                 </TabsContent>
@@ -331,7 +331,7 @@ const About = () => {
                   </div>
 
                   <div className="hidden mb-10 xl:flex">
-                            <Image className="mb-5" height={600} width={800} src={'/experience/technology.png'} />
+                            <Image className="mb-5" height={600} width={800} src={'/Experience/technology.png'} />
                   </div>
                   </div>
                   

@@ -5,7 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Card, CardHeader } from "./card";
 import { Github, Link2Icon, Terminal } from "lucide-react";
-import  Badge  from "./Badge";
+import  {Badge}  from "./badge";
 import { GitHubLogoIcon } from "@radix-ui/react-icons";
 import Reveal from "./Reveal";
 import { Toaster, toast } from "sonner";

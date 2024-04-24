@@ -17,9 +17,6 @@ import Socials from "./Socials";
 import DevImg from "./DevImg";
 import Badge from "./badge";
 
-// import DevImg from './hero/developer.png';
-// import Badge from './Badge'
-// import Socials from './Socials'
 
 const Me = () => {
   const [showArrow, setshowArrow] = useState(true);

@@ -15,7 +15,7 @@ import {
 import Reveal from "./ui/Reveal";
 import Socials from "./Socials";
 import DevImg from "./DevImg";
-import Badge from "./badge";
+import Badge from "./Badge";
 
 
 const Me = () => {

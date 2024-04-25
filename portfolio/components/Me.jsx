@@ -44,9 +44,7 @@ const Me = () => {
               Hello, my name is <Reveal>Vishal Meti </Reveal>
             </h1>
             <p className="subtitle max-w-[490px] mx-auto lg:mx-0">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque
-              possimus iure est culpa labore necessitatibus aperiam incidunt nam
-              illo autem.
+              I am a software developer from India with 2 Years of experience and worked with multiple tech stacks in many companies like SONY and Disprz
             </p>
             <div className="flex flex-col gap-y-3 md:flex-row gap-x-3 mx-auto xl:mx-0 mb-12">
               <Link href="/contact">

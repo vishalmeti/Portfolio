@@ -12,71 +12,6 @@ import ProjectCard from "./ui/ProjectCard";
 import { Swiper, SwiperSlide } from "swiper/react";
 import {projectData} from '../Data/ProjectsData'
 
-// const projectData = [
-//   {
-//     image: "/work/image.png",
-//     category: "react js",
-//     name: "abc website",
-//     description:
-//       "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint, blanditiis.",
-//     link: "/",
-//     github: "/",
-//   },
-//   {
-//     image: "/work/4.png",
-//     category: "react js",
-//     name: "abc website",
-//     description:
-//       "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint, blanditiis.",
-//     link: "/",
-//     github: "/",
-//   },
-//   {
-//     image: "/work/4.png",
-//     category: "full stack",
-//     name: "abc website",
-//     description:
-//       "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint, blanditiis.",
-//     link: "/",
-//     github: "/",
-//   },
-//   {
-//     image: "/work/2.png",
-//     category: "next js",
-//     name: "abc website",
-//     description:
-//       "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint, blanditiis.",
-//     link: "/",
-//     github: "/",
-//   },
-//   {
-//     image: "/work/2.png",
-//     category: "node js",
-//     name: "abc website",
-//     description:
-//       "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint, blanditiis.",
-//     link: "/",
-//     github: "/",
-//   },
-//   {
-//     image: "/work/2.png",
-//     category: "full stack",
-//     name: "abc website",
-//     description:
-//       "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint, blanditiis.",
-//     link: "/",
-//     github: "/",
-//   },
-//   {
-//     image: "/work/1.png",
-//     category: "next js",
-//     name: "abc website",
-//     description:
-//       "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint, blanditiis.",
-//     link: "/",
-//     github: "/",
-//   },
-// ];
 
 const Work = () => {
   return (
@@ -85,8 +20,7 @@ const Work = () => {
         <div className="max-w-[400px] mx-auto xl:mx-0 text-center xl:text-left mb-12 xl:h-[400px] flex flex-col justify-center items-center xl:items-start">
           <h2 className="section-title mb-4">Latest Projects</h2>
           <p className="subtitle mb-8">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia
-            libero voluptas ducimus?
+          Please feel free to peruse my recent projects to gain insight into my latest endeavors and contributions.
           </p>
           <Link href="/projects">
             <Button>All Projects</Button>

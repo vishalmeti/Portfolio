@@ -167,9 +167,7 @@ const About = () => {
                       Worked for over 2 years
                     </h3>
                     <p className="subtitle max-w-lg max-auto xl:mx-0">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Quos, ratione itaque. Amet harum consequuntur, sequi id
-                      aliquid officiis in similique.
+                    I have spent over two years in the corporate world, gaining valuable technological expertise and honing my skills through real-world applications
                     </p>
                     {/* icons  */}
                     <div className="grid xl:grid-cols-2 gap-4 mb-12">
@@ -213,9 +211,7 @@ const About = () => {
                       My Journey
                     </h3>
                     <p className="subtitle max-w-lg max-auto xl:mx-0">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Quos, ratione itaque. Amet harum consequuntur, sequi id
-                      aliquid officiis in similique.
+                    In my two-year journey as a software engineer, I've grown from my early experiences to tackling complex projects, continuously improving both technical and soft skills.<br/> Embracing challenges as opportunities, I'm eager to leverage my experiences to contribute meaningfully to future projects and teams.
                     </p>
                     {/* experience and education wrapper  */}
                     <div className=" flex flex-col xl:flex-row">

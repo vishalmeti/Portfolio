@@ -11,15 +11,15 @@ import Link from 'next/link'
 
 const icons=[
   {
-    path:'/',
+    path:'https://www.linkedin.com/in/vishal-meti-280876219/',
     name:<RiLinkedinFill/>
   },
   {
-    path:'/',
+    path:'https://github.com/vishalmeti?tab=repositories',
     name:<RiGithubFill/>
   },
   {
-    path:'/',
+    path:'https://www.youtube.com/channel/UCO3snDb8yGJYyPyGQbmddlA',
     name:<RiYoutubeFill/>
   }
 ]
@@ -29,7 +29,7 @@ const Socials = ({containerStyles , iconStyles}) => {
     <div className={`${containerStyles}`} >
 
     {icons.map((item,index)=>{
-      return <Link href={item.path} key={index} >
+      return <Link href={item.path} key={index} target='_blank' >
         <div className={`${iconStyles}`} >{item.name}</div>
       </Link>
     })}

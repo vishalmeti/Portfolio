@@ -3,6 +3,7 @@ import Reveal from './ui/Reveal'
 import Link from "next/link";
 import { Button } from './ui/button';
 import { Download } from 'lucide-react';
+import { ResumeLink } from '@/Data/Links';
 
 const Logo = () => {
   return (
@@ -16,7 +17,7 @@ const Logo = () => {
     </div>
     </Link>
 
-    <Link target="_blank" href="https://drive.google.com/file/d/1fWMXmRvxqxnf0OU2xjn_WM-lWbN42VML/view?usp=sharing">
+    <Link target="_blank" href={ResumeLink}>
 
         <Download size={18} />
         {/* </Button> */}

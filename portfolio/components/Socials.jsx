@@ -8,18 +8,19 @@ import {
 } from 'react-icons/ri'
 
 import Link from 'next/link'
+import { GitHubLink, LinkedInLink, YoutubeLink } from '@/Data/Links'
 
 const icons=[
   {
-    path:'https://www.linkedin.com/in/vishal-meti-280876219/',
+    path:LinkedInLink,
     name:<RiLinkedinFill/>
   },
   {
-    path:'https://github.com/vishalmeti?tab=repositories',
+    path:GitHubLink,
     name:<RiGithubFill/>
   },
   {
-    path:'https://www.youtube.com/channel/UCO3snDb8yGJYyPyGQbmddlA',
+    path:YoutubeLink,
     name:<RiYoutubeFill/>
   }
 ]

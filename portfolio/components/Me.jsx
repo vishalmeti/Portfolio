@@ -16,6 +16,8 @@ import Reveal from "./ui/Reveal";
 import Socials from "./Socials";
 import DevImg from "./DevImg";
 import Badge from "./Badge";
+import { ResumeLink } from "@/Data/Links";
+import { projectData } from "@/Data/ProjectsData";
 
 
 const Me = () => {
@@ -44,7 +46,7 @@ const Me = () => {
               Hello, my name is <Reveal>Vishal Meti </Reveal>
             </h1>
             <p className="subtitle max-w-[490px] mx-auto lg:mx-0">
-              I am a software developer from India with 2 Years of experience and worked with multiple tech stacks in companies like SONY and Disprz
+              I am a software developer from Bangalore, India with 2 Years of experience and worked with multiple tech stacks in companies like SONY and Disprz
             </p>
             <div className="flex flex-col gap-y-3 md:flex-row gap-x-3 mx-auto xl:mx-0 mb-12">
               <Link href="/contact">
@@ -52,9 +54,9 @@ const Me = () => {
                   Contact me <Send size={18} />
                 </Button>
               </Link>
-              <Link target="_blank" href="https://drive.google.com/file/d/1fWMXmRvxqxnf0OU2xjn_WM-lWbN42VML/view?usp=sharing">
+              <Link target="_blank" href={ResumeLink}>
               <Button variant="secondary" className="gap-x-2">
-                Download CV <Download size={18} />
+                View Resume <Download size={18} />
               </Button>
               </Link>
             </div>
@@ -66,7 +68,7 @@ const Me = () => {
           </div>
           <div className="hidden xl:flex relative floating">
             <Badge className="" icon={<RiBriefcase4Fill/>} containerStyles='absolute top-[24%] left-[-5rem]' endCount={2} endCountText='+' badgeText='Years of experience' />
-            <Badge className="" icon={<RiTodoFill/>} containerStyles='absolute top-[80%] left-[1rem]' endCount={5} endCountText='' badgeText='Finished Projects' />
+            <Badge className="" icon={<RiTodoFill/>} containerStyles='absolute top-[80%] left-[1rem]' endCount={projectData.length} endCountText='' badgeText='Finished Projects' />
             <Badge className="" icon={<RiYoutubeFill/>} containerStyles='absolute top-[55%] right-[-3rem]' endCount={1240} endCountText='k' badgeText='Viewers' />
             <div
               className="bg-hero_shape2_light zi--1 dark:bg-hero_shape2_dark w-[500px] z-0 h-[500px] bg-no-repeat absolute -top-1 -right-2"

@@ -1,3 +1,4 @@
+import Constants from '@/Data/Constants';
 import  Form  from '@/components/Form';
 import {MailIcon, HomeIcon, PhoneCall} from 'lucide-react';
 
@@ -26,17 +27,17 @@ const Contact = () => {
               {/* mail  */}
             <div className="flex items-center gap-x-8">
               <MailIcon size={18} className='text-primary'/>
-              <div className="">work.vishalmeti@gmail.com</div>
+              <div className="">{Constants.email}</div>
             </div>
               {/* addr  */}
             <div className="flex items-center gap-x-8">
               <HomeIcon size={18} className='text-primary'/>
-              <div className="">Bangalore , Karnataka, India</div>
+              <div className="">{Constants.address}</div>
             </div>
               {/* phone  */}
             <div className="flex items-center gap-x-8">
               <PhoneCall size={18} className='text-primary'/>
-              <div className="">+91 9902638798</div>
+              <div className="">{Constants.phone}</div>
             </div>
             
           </div>

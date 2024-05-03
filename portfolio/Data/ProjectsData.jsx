@@ -8,15 +8,15 @@ export const projectData = [
       link: "https://crypto-insights-eosin.vercel.app/",
       github: "/",
     },
-    {
-      image: "/work/jobify.png",
-      category: "Full stack",
-      name: "Jobify",
-      description:
-        "Developed a full stack MERN project aimed at simplifying the job application tracking process at a single web page.",
-      link: "https://jobify.live/",
-      github: "/",
-    },
+    // {
+    //   image: "/work/jobify.png",
+    //   category: "Full stack",
+    //   name: "Jobify",
+    //   description:
+    //     "Developed a full stack MERN project aimed at simplifying the job application tracking process at a single web page.",
+    //   link: "https://jobify.live/",
+    //   github: "/",
+    // },
     {
       image: "/work/studybudy.png",
       category: "Django",

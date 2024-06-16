@@ -1,5 +1,14 @@
 export const projectData = [
     {
+      image: "/work/nexus.png",
+      category: "next js",
+      name: "Nexus Note",
+      description:
+        "Nexus is a productivity and note-taking web application. It is an online organizational tool, offering users free-to-use",
+      link: "https://nexus-note.vercel.app/",
+      github: "https://github.com/vishalmeti/nexus-note",
+    },
+    {
       image: "/work/coins.png",
       category: "react js",
       name: "Crypto Insights",

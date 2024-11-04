@@ -1,5 +1,14 @@
 export const projectData = [
-    {
+  {
+    image: "/work/gemini.png",
+    category: "react js",
+    name: "Gemini AI Clone",
+    description:
+      "A clone of Gemini AI website, built using React js and Google Gemini API for fetching data. It allows users to query for any information and get the results.",
+    link: 'https://gemini-clone-eight-khaki.vercel.app/',
+    github: "https://github.com/vishalmeti/Gemini-clone",
+  },
+  {
       image: "/work/nexus.png",
       category: "next js",
       name: "Nexus Note",

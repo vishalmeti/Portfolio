@@ -62,6 +62,12 @@ const qualificationData = [
     title: "experience",
     data: [
       {
+        company: "LINARC",
+        role: "SDE - 1 / Full Stack Developer",
+        years: "Aug 2024 - Current",
+        logo:'/Experience/linarc.png'
+      },
+      {
         company: "SONY",
         role: "Software Engineer / Web Developer",
         years: "Aug 2022 - Aug 2023",
@@ -70,7 +76,7 @@ const qualificationData = [
       {
         company: "Disprz",
         role: "Associate Software Engineer / Web Developer",
-        years: "Aug 2023 - Current",
+        years: "Aug 2023 - Aug 2024",
         logo:'/Experience/disprz.png'
       },
     ],
@@ -83,7 +89,15 @@ const skillData = [
     data: [
       {
         name: "React Js / Redux",
-        strength:80
+        strength:90
+      },
+      {
+        name: "Vue js / Nuxt js",
+        strength: 90
+      },
+      {
+        name: "Django",
+        strength:85
       },
       {
         name: "Next Js",
@@ -91,7 +105,7 @@ const skillData = [
       },
       {
         name: "Python",
-        strength:89
+        strength:90
       },
       {
         name: "Lit Js",
@@ -110,16 +124,12 @@ const skillData = [
         strength:62
       },
       {
-        name: "Django",
-        strength:60
-      },
-      {
         name: "Express.js",
-        strength:65
+        strength:35
       },
       {
         name: "Mongo Db",
-        strength:60
+        strength:40
       },
       {
         name: "HTML / CSS",
@@ -164,10 +174,10 @@ const About = () => {
                   <div className="flex gap-44">
                   <div className="text-center xl:text-left">
                     <h3 className="h3 mb-4">
-                      Worked for over 2 years
+                      Worked for over 3 years
                     </h3>
                     <p className="subtitle max-w-lg max-auto xl:mx-0">
-                    I have spent over two years in the corporate world, gaining valuable technological expertise and honing my skills through real-world applications
+                    I have spent over 3 years in the corporate world, gaining valuable technological expertise and honing my skills through real-world applications
                     </p>
                     {/* icons  */}
                     <div className="grid xl:grid-cols-2 gap-4 mb-12">

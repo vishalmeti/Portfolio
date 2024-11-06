@@ -315,7 +315,7 @@ const About = () => {
 
                   <div className="text-center xl:text-left">
                     <h3 className="h3 mb-3">
-                      Skills I am Wellworsed in
+                      Skills I am well versed in
                     </h3>
                     <div className="">
                       <div className="border-b border-border mb-4"></div>

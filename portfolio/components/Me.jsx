@@ -22,7 +22,27 @@ import { projectData } from "@/Data/ProjectsData";
 
 const Me = () => {
   const [showArrow, setshowArrow] = useState(true);
+  const [yearsOfExperience, setYearsOfExperience] = useState(0);
+
   useEffect(() => {
+    // Calculate years of experience from July 2022 to current date
+    const calculateExperience = () => {
+      const startDate = new Date(2022, 5, 1); // July 2022 (month is 0-indexed)
+      const currentDate = new Date();
+
+      let years = currentDate.getFullYear() - startDate.getFullYear();
+
+      // Adjust if current month is before July
+      // if (currentDate.getMonth() < 6 ||
+      //   (currentDate.getMonth() === 6 && currentDate.getDate() < 1)) {
+      //   years--;
+      // }
+
+      return Math.max(years, 0);
+    };
+
+    setYearsOfExperience(calculateExperience());
+
     const listner = window.addEventListener("scroll", () => {
       window.scrollY > 140 ? setshowArrow(false) : setshowArrow(true);
     });
@@ -67,7 +87,7 @@ const Me = () => {
             />
           </div>
           <div className="hidden xl:flex relative floating">
-            <Badge className="" icon={<RiBriefcase4Fill/>} containerStyles='absolute top-[24%] left-[-5rem]' endCount={2} endCountText='+' badgeText='Years of experience' />
+            <Badge className="" icon={<RiBriefcase4Fill />} containerStyles='absolute top-[24%] left-[-5rem]' endCount={yearsOfExperience} endCountText='+' badgeText='Years of experience' />
             <Badge className="" icon={<RiTodoFill/>} containerStyles='absolute top-[80%] left-[1rem]' endCount={projectData.length} endCountText='' badgeText='Finished Projects' />
             <Badge className="" icon={<RiYoutubeFill/>} containerStyles='absolute top-[55%] right-[-3rem]' endCount={1240} endCountText='k' badgeText='Viewers' />
             <div
